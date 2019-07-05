@@ -1,23 +1,8 @@
-<p>application test form</p>
-<div class="form container">
+<button class="button" mat-raised-button color="accent" (click)="router.navigate(['home']);">Home</button>
+<button class="button" mat-raised-button color="accent">Login</button>
+<button class="button" mat-raised-button color="accent" (click)="router.navigate(['signup']);">Signup</button>
+<br>
+<br>
+<br>
 
-  <mat-form-field class="form">
-    <input matInput placeholder="First Name">
-  </mat-form-field>
-  <br>
-  <mat-form-field class="form">
-    <input matInput placeholder="Last Name">
-  </mat-form-field>
-  <br>
-  <mat-form-field class="form">
-    <input matInput placeholder="Email">
-  </mat-form-field>
-
-
-
-  <br><br>
-
-
-  <button class="button" mat-raised-button color="accent">Submit</button>
-</div>
 <router-outlet></router-outlet>
