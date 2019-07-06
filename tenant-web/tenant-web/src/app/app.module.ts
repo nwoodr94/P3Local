@@ -7,10 +7,24 @@ import { AppComponent } from './app.component';
 import { TenantWebProfileModule } from '../../projects/tenant-web-profile/src/lib/tenant-web-profile.module';
 import { TenantWebSignupModule } from '../../projects/tenant-web-signup/src/lib/tenant-web-signup.module';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { NavmenuComponent } from './navmenu/navmenu.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { SlickModule } from 'ngx-slick';
+import { ContentComponent } from './content/content.component';
+import { CardComponent } from './card/card.component';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavmenuComponent,
+    CarouselComponent,
+    ContentComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     TenantWebProfileModule,
     TenantWebSignupModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SlickModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
