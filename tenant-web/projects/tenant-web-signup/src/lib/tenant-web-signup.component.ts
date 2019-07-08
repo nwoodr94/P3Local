@@ -10,6 +10,7 @@ import { Tenant } from '../tenant';
 
 export class TenantWebSignupComponent implements OnInit {
   pwMatch: boolean;
+  validEmail: boolean;
   pwMessage: string;
   tenant: Tenant;
   isLinear = true;
@@ -23,17 +24,17 @@ export class TenantWebSignupComponent implements OnInit {
     this.tenant= new Tenant();
     this.pwMatch=true;
     this.firstFormGroup = this._formBuilder.group({
-      fn: ['', [Validators.required]],
-      ln: ['', [Validators.required]],
-      e: ['', [Validators.required, Validators.email]]
+      fn: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      ln: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      e: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.](?!edu){1}[a-zA-Z]{2,}')]]
     });
     this.secondFormGroup = this._formBuilder.group({
       l: ['', Validators.required],
       b: ['', Validators.required],
       a: ['', Validators.required],
-      c: ['', Validators.required],
-      cma: ['', Validators.required],
-      cmo: ['', Validators.required]
+      c: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+      cma: [''],
+      cmo: ['']
     });
     this.thirdFormGroup = this._formBuilder.group({
       pw: ['', Validators.required],
@@ -45,6 +46,8 @@ export class TenantWebSignupComponent implements OnInit {
     this.tenant.firstName = this.firstFormGroup.get('fn').value;
     this.tenant.lastName = this.firstFormGroup.get('ln').value;
     this.tenant.email = this.firstFormGroup.get('e').value;
+    //let v = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    //console.log(v.test(String(this.tenant.email).toLowerCase()));
     console.log(this.tenant.firstName);
     console.log(this.tenant.lastName);
     console.log(this.tenant.email);
