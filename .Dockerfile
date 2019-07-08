@@ -1,7 +1,7 @@
 FROM node:lts-alpine AS base
 
 WORKDIR /app
-COPY ./ .
+COPY ./tenant-web .
 RUN npm ci
 RUN npm run build:ci
 #TODO: npm install profile and signup
