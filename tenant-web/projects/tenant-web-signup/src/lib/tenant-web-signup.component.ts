@@ -10,6 +10,7 @@ import { Tenant } from '../tenant';
 
 export class TenantWebSignupComponent implements OnInit {
   pwMatch: boolean;
+  pwMessage: string;
   tenant: Tenant;
   isLinear = true;
   firstFormGroup: FormGroup;
@@ -20,11 +21,11 @@ export class TenantWebSignupComponent implements OnInit {
 
   ngOnInit() {
     this.tenant= new Tenant();
-
+    this.pwMatch=true;
     this.firstFormGroup = this._formBuilder.group({
-      fn: ['', Validators.required],
-      ln: ['', Validators.required],
-      e: ['', Validators.required]
+      fn: ['', [Validators.required]],
+      ln: ['', [Validators.required]],
+      e: ['', [Validators.required, Validators.email]]
     });
     this.secondFormGroup = this._formBuilder.group({
       l: ['', Validators.required],
@@ -35,7 +36,8 @@ export class TenantWebSignupComponent implements OnInit {
       cmo: ['', Validators.required]
     });
     this.thirdFormGroup = this._formBuilder.group({
-      thirdCtrl: ['', Validators.required]
+      pw: ['', Validators.required],
+      cfpw: ['', Validators.required]
     });
   }
 
@@ -52,20 +54,29 @@ export class TenantWebSignupComponent implements OnInit {
     this.tenant.location = this.secondFormGroup.get('l').value;
     this.tenant.batch = this.secondFormGroup.get('b').value;
     this.tenant.address = this.secondFormGroup.get('a').value;
-    this.tenant.contact = contact;
-    this.tenant.carMake = carMake;
-    this.tenant.carModel = carModel;
+    this.tenant.contact = this.secondFormGroup.get('c').value;
+    this.tenant.carMake = this.secondFormGroup.get('cma').value;
+    this.tenant.carModel = this.secondFormGroup.get('cmo').value;
+    console.log(this.tenant.location);
+    console.log(this.tenant.batch);
+    console.log(this.tenant.address);
+    console.log(this.tenant.contact);
+    console.log(this.tenant.carMake);
+    console.log(this.tenant.carModel);
   }
 
   tenantPassword() {
-    if (password === confirmPass){
-      this.tenant.password = password;
-      this.tenant.confirmPass = confirmPass;
-      this.pwMatch = true;
+    if (this.thirdFormGroup.get('pw').value=== this.thirdFormGroup.get('cfpw').value){
+      this.tenant.password = this.thirdFormGroup.get('pw').value;
+      //this.pwMatch = true;
+      this.pwMessage ="";
     }
     else {
-      this.pwMatch = false;
+      //this.pwMatch = false;
+      this.pwMessage = "Passwords do not match";
     }
+    console.log(this.pwMatch);
+    console.log(this.tenant.password);
   }
   
 

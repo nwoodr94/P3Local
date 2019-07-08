@@ -1,13 +1,16 @@
+<h1 style="font-weight:bold">Follow the steps to signup</h1>
+<br>
 <mat-horizontal-stepper linear #stepper>
 
   <mat-step [stepControl]="firstFormGroup" [completed]="false">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>First Step</ng-template>
+      <ng-template matStepLabel>Credentials</ng-template>
       <mat-form-field>
-        <input matInput 
+        <input matInput
         placeholder="First Name"
         formControlName="fn"
         required 
+        type="text"
         #firstName
         >
       </mat-form-field>
@@ -16,6 +19,7 @@
         placeholder="Last Name"
         formControlName="ln" 
         required 
+        type="text"
         #lastName
         >
       </mat-form-field>
@@ -23,8 +27,10 @@
       <mat-form-field>
         <input matInput 
         placeholder="Email"
-        formControlName="e" 
-        required 
+        formControlName="e"
+        required
+        pattern = "**@**.**"
+        type="email" 
         #email
         >
       </mat-form-field>
@@ -41,43 +47,54 @@
 
   <mat-step [stepControl]="secondFormGroup" [completed]="false">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Second Step</ng-template>
+      <ng-template matStepLabel>Details</ng-template>
       <mat-form-field>
         <input matInput 
         placeholder="Location"
+        formControlName="l" 
         required 
+        type = "text"
         #location>
       </mat-form-field>
       <br>
       <mat-form-field>
         <input matInput 
         placeholder="Batch"
+        formControlName="b" 
         required 
+        type = "text"
         #batch>
       </mat-form-field>
       <br>
       <mat-form-field>
         <input matInput 
         placeholder="Permanent Address"
+        formControlName="a" 
         required 
         #address>
       </mat-form-field>
       <br>
       <mat-form-field>
         <input matInput 
-        placeholder="Emergency Contact"
+        placeholder="Emergency Phone"
+        formControlName="c" 
         required 
+        type = "number"
         #contact>
       </mat-form-field>
       <br>
       <mat-form-field>
         <input matInput 
         placeholder="Care Make"
+        formControlName="cma" 
+        type = "text"
         #carMake>
       </mat-form-field>
       <mat-form-field>
         <input matInput 
-        placeholder="Car Model" 
+        placeholder="Car Model"
+        formControlName="cmo"  
+        type = "text"
         #carModel>
       </mat-form-field>
       <div>
@@ -92,10 +109,11 @@
 
   <mat-step [stepControl]="thirdFormGroup" [completed]="false">
     <form [formGroup]="thirdFormGroup">
-      <ng-template matStepLabel>Final Step</ng-template>
+      <ng-template matStepLabel>Password</ng-template>
       <mat-form-field>
         <input matInput 
         placeholder="Password" 
+        formControlName="pw"
         type="password" 
         required 
         #password>
@@ -103,10 +121,12 @@
       <mat-form-field>
         <input matInput 
         placeholder="Confirm Password" 
+        formControlName="cfpw"
         type="password" 
         required 
         #confirmPass>
       </mat-form-field>
+      <p style="color:red;">{{pwMessage}}</p>
       <div>
         <button mat-button 
         matStepperNext 
