@@ -4,18 +4,37 @@
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>First Step</ng-template>
       <mat-form-field>
-        <input matInput placeholder="First Name" formControlName="firstCtrl" required>
+        <input matInput 
+        placeholder="First Name"
+        formControlName="fn"
+        required 
+        #firstName
+        >
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Last Name" formControlName="firstCtrl" required>
+        <input matInput 
+        placeholder="Last Name"
+        formControlName="ln" 
+        required 
+        #lastName
+        >
       </mat-form-field>
       <br>
       <mat-form-field>
-        <input matInput placeholder="Email" formControlName="firstCtrl" required>
+        <input matInput 
+        placeholder="Email"
+        formControlName="e" 
+        required 
+        #email
+        >
       </mat-form-field>
       <br>
       <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button 
+        matStepperNext 
+        (click)="tenantCredentials()">
+        Next
+        </button>
       </div>
     </form>
   </mat-step>
@@ -24,29 +43,49 @@
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Second Step</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Location" formControlName="secondCtrl" required>
+        <input matInput 
+        placeholder="Location"
+        required 
+        #location>
       </mat-form-field>
       <br>
       <mat-form-field>
-        <input matInput placeholder="Batch" formControlName="secondCtrl" required>
+        <input matInput 
+        placeholder="Batch"
+        required 
+        #batch>
       </mat-form-field>
       <br>
       <mat-form-field>
-        <input matInput placeholder="Permanent Address" formControlName="secondCtrl" required>
+        <input matInput 
+        placeholder="Permanent Address"
+        required 
+        #address>
       </mat-form-field>
       <br>
       <mat-form-field>
-        <input matInput placeholder="Emergency Contact" formControlName="secondCtrl" required>
+        <input matInput 
+        placeholder="Emergency Contact"
+        required 
+        #contact>
       </mat-form-field>
       <br>
       <mat-form-field>
-        <input matInput placeholder="Make of Car" formControlName="secondCtrl">
+        <input matInput 
+        placeholder="Care Make"
+        #carMake>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Model of Car" formControlName="secondCtrl">
+        <input matInput 
+        placeholder="Car Model" 
+        #carModel>
       </mat-form-field>
       <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button 
+        matStepperNext 
+        (click)="tenantDetails()">
+        Next
+        </button>
       </div>
     </form>
   </mat-step>
@@ -55,15 +94,26 @@
     <form [formGroup]="thirdFormGroup">
       <ng-template matStepLabel>Final Step</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Password" type="password" formControlName="thirdCtrl" required>
+        <input matInput 
+        placeholder="Password" 
+        type="password" 
+        required 
+        #password>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Comfirm Password" type="password" formControlName="thirdCtrl" required>
+        <input matInput 
+        placeholder="Confirm Password" 
+        type="password" 
+        required 
+        #confirmPass>
       </mat-form-field>
       <div>
-        <button mat-button matStepperNext>Done</button>
+        <button mat-button 
+        matStepperNext 
+        (click)="tenantPassword()">
+        Done
+        </button>
       </div>
     </form>
   </mat-step>
-
 </mat-horizontal-stepper>
