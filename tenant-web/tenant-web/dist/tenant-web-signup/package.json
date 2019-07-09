@@ -1,0 +1,23 @@
+{
+  "name": "tenant-web-signup",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.0.3",
+    "@angular/core": "^8.0.3",
+    "@angular/material": "^8.0.2",
+    "@angular/forms": "~8.0.1"
+  },
+  "main": "bundles/tenant-web-signup.umd.js",
+  "module": "fesm5/tenant-web-signup.js",
+  "es2015": "fesm2015/tenant-web-signup.js",
+  "esm5": "esm5/tenant-web-signup.js",
+  "esm2015": "esm2015/tenant-web-signup.js",
+  "fesm5": "fesm5/tenant-web-signup.js",
+  "fesm2015": "fesm2015/tenant-web-signup.js",
+  "typings": "tenant-web-signup.d.ts",
+  "metadata": "tenant-web-signup.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
