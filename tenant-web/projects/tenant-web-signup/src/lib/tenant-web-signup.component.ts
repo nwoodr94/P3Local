@@ -11,7 +11,8 @@ import { Tenant } from '../tenant';
 export class TenantWebSignupComponent implements OnInit {
   pwMatch: boolean;
   validEmail: boolean;
-  pwMessage: string;
+  pwMatchMessage: string;
+  pwGoodMessage: string;
   tenant: Tenant;
   isLinear = true;
   firstFormGroup: FormGroup;
@@ -72,11 +73,13 @@ export class TenantWebSignupComponent implements OnInit {
     if (this.thirdFormGroup.get('pw').value=== this.thirdFormGroup.get('cfpw').value){
       this.tenant.password = this.thirdFormGroup.get('pw').value;
       //this.pwMatch = true;
-      this.pwMessage ="";
+      this.pwMatchMessage ="";
+      this.pwGoodMessage = "Password Matched!";
     }
     else {
       //this.pwMatch = false;
-      this.pwMessage = "Passwords do not match";
+      this.pwMatchMessage = "Password does not match";
+      this.pwGoodMessage = "";
     }
     console.log(this.pwMatch);
     console.log(this.tenant.password);
