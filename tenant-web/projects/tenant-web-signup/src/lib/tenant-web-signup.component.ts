@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tenant } from '../tenant';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'lib-tenant-web-signup',
@@ -10,8 +12,6 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class TenantWebSignupComponent implements OnInit {
-<<<<<<< HEAD
-=======
   pwMatch: boolean;
   validEmail: boolean;
   pwMatchMessage: string;
@@ -21,13 +21,10 @@ export class TenantWebSignupComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
->>>>>>> 7c76f6d603fdea5e0c2be1fa97ed21b1320bfa7f
 
   constructor() { }
 
   ngOnInit() {
-<<<<<<< HEAD
-=======
     this.tenant= new Tenant();
     this.pwMatch=true;
     this.firstFormGroup = this._formBuilder.group({
@@ -89,7 +86,6 @@ export class TenantWebSignupComponent implements OnInit {
     }
     console.log(this.pwMatch);
     console.log(this.tenant.password);
->>>>>>> 7c76f6d603fdea5e0c2be1fa97ed21b1320bfa7f
   }
 
 }
