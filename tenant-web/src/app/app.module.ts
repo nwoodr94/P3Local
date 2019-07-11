@@ -13,7 +13,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { SlickModule } from 'ngx-slick';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './card/card.component';
-
+import { TenantWebSignupComponent } from '../../dist/tenant-web-signup'
 
 
 
@@ -24,7 +24,8 @@ import { CardComponent } from './card/card.component';
     NavmenuComponent,
     CarouselComponent,
     ContentComponent,
-    CardComponent
+    CardComponent,
+    TenantWebSignupComponent
   ],
   imports: [
     BrowserModule,
