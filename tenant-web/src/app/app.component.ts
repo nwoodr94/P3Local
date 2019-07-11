@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormsModule, FormControl } from '@angular/forms';
+import { MatStepperModule} from '@angular/material/stepper';
 
 @Component({
   selector: 'app-root',
