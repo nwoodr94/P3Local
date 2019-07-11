@@ -122,13 +122,15 @@
         formControlName="cfpw"
         type="password" 
         required 
-        #confirmPass>
+        #confirmPass
+        (keyup)="tenantPassword()">
       </mat-form-field>
-      <p style="color:red;">{{pwMessage}}</p>
+      <p style="color:red;">{{pwMatchMessage}}</p>
+      <p style="color:green;">{{pwGoodMessage}}</p>
       <div>
         <button mat-button 
         matStepperNext 
-        (click)="tenantPassword()">
+        >
         Done
         </button>
       </div>
