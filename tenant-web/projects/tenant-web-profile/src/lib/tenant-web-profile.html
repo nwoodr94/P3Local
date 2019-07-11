@@ -1,19 +1,57 @@
 <!-- Use *ngFor to iterate through tenant properties on display -->
 
 <div>
-
+<h1>{{tenant.firstName+" "}} {{tenant.lastName}}'s Profile</h1>
 <!-- Model Binding -->
-<p>First Name: </p>
-<p>Last Name:</p>
-<p>Email:</p>
-<p>Location:</p>
-<p>Batch:</p>
-<p>Car Make:</p>
-<p>Car Model:</p>
-<p>Emergency Phone:</p>
-<p>Roomate:</p>
 
-<mat-button>Maintenance Request</mat-button>
-<mat-button>Change Roommate</mat-button>
+<table align = "center">
+    <!-- <tr>
+      <td>First Name: </td>
+      <td>{{tenant.firstName}}</td>
+    </tr>
+    <tr>
+      <td>Last Name:</td>
+      <td>{{tenant.lastName}}</td>
+    </tr> -->
+    <tr>
+      <td>Email:</td>
+      <td>{{tenant.email}}</td>
+    </tr>
+    <tr>
+      <td>Location:</td>
+      <td>{{tenant.location}}</td>
+    </tr>
+    <tr>
+        <td>Batch:</td>
+        <td>{{tenant.batch}}</td>
+    </tr>
+    <tr>
+        <td>Emergency Contact:</td>
+        <td>{{tenant.contact}}</td>
+    </tr>
+    <tr>
+        <td>Roommate:</td>
+        <td>{{tenant.roommate}}</td>
+    </tr>
+    <tr>
+        <td>Car Make:</td>
+        <td>{{tenant.carMake}}</td>
+    </tr>
+    <tr>
+        <td>carMake:</td>
+        <td>{{tenant.carModel}}</td>
+    </tr>
+</table>
+<br>
+<br>
+<button mat-flat-button>
+Maintenance Request
+</button>
+<br>
+<br>
+<button mat-flat-button>
+Change Roomate
+</button>
+
 
 </div>

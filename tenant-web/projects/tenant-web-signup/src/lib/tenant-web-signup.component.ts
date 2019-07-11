@@ -5,7 +5,7 @@ import { Tenant } from '../tenant';
 @Component({
   selector: 'lib-tenant-web-signup',
   templateUrl: 'tenant-web-signup.html',
-  styles: []
+  styleUrls: ['./tenant-web-signup.css']
 })
 
 export class TenantWebSignupComponent implements OnInit {
@@ -70,18 +70,25 @@ export class TenantWebSignupComponent implements OnInit {
   }
 
   tenantPassword() {
-    if (this.thirdFormGroup.get('pw').value=== this.thirdFormGroup.get('cfpw').value){
-      this.tenant.password = this.thirdFormGroup.get('pw').value;
-      //this.pwMatch = true;
-      this.pwMatchMessage ="";
-      this.pwGoodMessage = "Password Matched!";
+    if(this.thirdFormGroup.get('cfpw').value!="")
+    {
+      if (this.thirdFormGroup.get('pw').value=== this.thirdFormGroup.get('cfpw').value){
+        this.tenant.password = this.thirdFormGroup.get('pw').value;
+        //this.pwMatch = true;
+        this.pwMatchMessage ="";
+        this.pwGoodMessage = "Password Matched!";
+      }
+      else {
+        //this.pwMatch = false;
+        this.pwMatchMessage = "Password does not match";
+        this.pwGoodMessage = "";
+      }
     }
-    else {
-      //this.pwMatch = false;
-      this.pwMatchMessage = "Password does not match";
-      this.pwGoodMessage = "";
+    else
+    {
+      this.pwMatchMessage = "*Re-enter to confirm your password";
     }
-    console.log(this.pwMatch);
+    console.log(this.thirdFormGroup.get('cfpw').value!="");
     console.log(this.tenant.password);
   }
 

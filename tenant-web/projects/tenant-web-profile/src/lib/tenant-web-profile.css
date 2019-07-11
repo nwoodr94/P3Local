@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+    width: 25%;
+  }
+  
+  th, td {
+    /* text-align: left; */
+    padding: 8px;
+  }
+  
+  tr:nth-child(odd){background-color: #f2f2f2}
+  
+  th {
+    color: white;
+  }
+
+  div {
+      text-align: center;
+  }
+  button{
+    background-color: #888888;
+  }

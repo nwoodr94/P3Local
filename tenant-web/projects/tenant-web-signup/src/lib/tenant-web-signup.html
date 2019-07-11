@@ -35,7 +35,7 @@
       </mat-form-field>
       <br>
       <div>
-        <button mat-button 
+        <button mat-flat-button 
         matStepperNext 
         (click)="tenantCredentials()">
         Next
@@ -96,7 +96,7 @@
         #carModel>
       </mat-form-field>
       <div>
-        <button mat-button 
+        <button mat-flat-button 
         matStepperNext 
         (click)="tenantDetails()">
         Next
@@ -114,7 +114,8 @@
         formControlName="pw"
         type="password" 
         required 
-        #password>
+        #password
+        (keyup)="tenantPassword()">
       </mat-form-field>
       <mat-form-field>
         <input matInput 
@@ -128,7 +129,7 @@
       <p style="color:red;">{{pwMatchMessage}}</p>
       <p style="color:green;">{{pwGoodMessage}}</p>
       <div>
-        <button mat-button 
+        <button mat-flat-button 
         matStepperNext 
         >
         Done

@@ -14,6 +14,7 @@ import { SlickModule } from 'ngx-slick';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './card/card.component';
 import { TenantWebSignupComponent } from '../../dist/tenant-web-signup';
+import { TenantWebProfileComponent } from '../../dist/tenant-web-profile';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { RouterModule } from '@angular/router';
@@ -28,6 +29,7 @@ import { RouterModule } from '@angular/router';
     ContentComponent,
     CardComponent,
     TenantWebSignupComponent,
+    TenantWebProfileComponent,
     AboutComponent
   ],
   imports: [

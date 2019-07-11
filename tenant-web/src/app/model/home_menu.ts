@@ -1,3 +1,3 @@
-export const navmenuItem : string[]= ["home", "about", "programs", "houses", "signup"];
+export const navmenuItem : string[]= ["home", "about", "programs", "profile", "signup"];
 
 
