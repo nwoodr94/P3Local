@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Tenant } from '../tenant';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'lib-tenant-web-signup',
-  template: `
-    <p>
-      tenant-web-signup works!
-    </p>
-  `,
+  templateUrl: 'tenant-web-signup.html',
   styles: []
 })
+
 export class TenantWebSignupComponent implements OnInit {
   pwMatch: boolean;
   validEmail: boolean;
@@ -22,7 +19,7 @@ export class TenantWebSignupComponent implements OnInit {
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
 
-  constructor() { }
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.tenant= new Tenant();

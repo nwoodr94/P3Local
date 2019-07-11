@@ -6,15 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TenantWebProfileModule } from '../../projects/tenant-web-profile/src/lib/tenant-web-profile.module';
 import { TenantWebSignupModule } from '../../projects/tenant-web-signup/src/lib/tenant-web-signup.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SlickModule } from 'ngx-slick';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './card/card.component';
-import { TenantWebSignupComponent } from '../../dist/tenant-web-signup'
-
+import { TenantWebSignupComponent } from '../../dist/tenant-web-signup';
+import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http'; 
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -25,11 +27,14 @@ import { TenantWebSignupComponent } from '../../dist/tenant-web-signup'
     CarouselComponent,
     ContentComponent,
     CardComponent,
-    TenantWebSignupComponent
+    TenantWebSignupComponent,
+    AboutComponent
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,  
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
@@ -39,7 +44,7 @@ import { TenantWebSignupComponent } from '../../dist/tenant-web-signup'
     BrowserAnimationsModule,
     SlickModule.forRoot(),
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
