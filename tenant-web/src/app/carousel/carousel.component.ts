@@ -16,9 +16,9 @@ export class CarouselComponent implements OnInit {
 };
 
   slides = [
-    {img:   "https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" },
-    {img: "https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"},
-    {img: "https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"},
+    {img: "../assets/imgs/apartment-1.jpg" },
+    {img: "../assets/imgs/apartment-2.jpg"},
+    {img: "../assets/imgs/apartment-3.jpg"},
 
   ]
   constructor() { }
