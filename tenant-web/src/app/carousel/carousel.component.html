@@ -2,11 +2,12 @@
  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
     <div ngxSlickItem *ngFor="let slide of slides" class="slide">
           <img src="{{ slide.img }}" alt="" class="img-slider">
-    
-    <div class="text-block"> 
-            <h4>Nature</h4>
+    </div>
+
+</ngx-slick>    
+
+      <div class="text-block"> 
+            <h1>Nature</h1>
             <p>What a beautiful sunrise</p>
     </div>
-</div>
-</ngx-slick>
 </div>

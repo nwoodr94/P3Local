@@ -16,7 +16,7 @@ export class CarouselComponent implements OnInit {
 };
 
   slides = [
-    {img: "../assets/imgs/apartment-1.jpg" },
+    {img: "../assets/imgs/apartment-1.jpg"},
     {img: "../assets/imgs/apartment-2.jpg"},
     {img: "../assets/imgs/apartment-3.jpg"},
     {img: "../assets/imgs/apartment-4.jpg"},
