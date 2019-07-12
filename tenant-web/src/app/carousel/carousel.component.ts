@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-carousel',
@@ -16,7 +17,7 @@ export class CarouselComponent implements OnInit {
 };
 
   slides = [
-    {img: "../assets/imgs/apartment-1.jpg" },
+    {img: "../assets/imgs/apartment-1.jpg"},
     {img: "../assets/imgs/apartment-2.jpg"},
     {img: "../assets/imgs/apartment-3.jpg"},
     {img: "../assets/imgs/apartment-4.jpg"},
@@ -24,7 +25,9 @@ export class CarouselComponent implements OnInit {
     {img: "../assets/imgs/apartment-6.jpg"},
 
   ]
-  constructor() { }
+  constructor(private router: Router) { 
+    
+  }
 
   ngOnInit() {
   }
@@ -51,6 +54,10 @@ export class CarouselComponent implements OnInit {
 
   beforeChange(e) {
     console.log('beforeChange');
+  }
+
+  signUpLink() {
+    this.router.navigate(['/signup'])
   }
 
 }
