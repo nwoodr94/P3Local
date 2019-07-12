@@ -1,13 +1,17 @@
-<div class="text-container">
+<div class="container">
  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
     <div ngxSlickItem *ngFor="let slide of slides" class="slide">
           <img src="{{ slide.img }}" alt="" class="img-slider">
     </div>
 
-</ngx-slick>    
+</ngx-slick>
+</div>
 
       <div class="text-block"> 
-            <h1>Nature</h1>
-            <p>What a beautiful sunrise</p>
-    </div>
+            <h1>Revature Housing</h1>
+            <p id="information">Find an elegant place to stay while you train with Revature.</p>     
+            <button mat-button (click)="signUpLink()">
+            Sign Up Today
+            </button>
+
 </div>
