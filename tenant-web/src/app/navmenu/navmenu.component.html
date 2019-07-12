@@ -10,9 +10,21 @@
 
    
   </nav>
-  <div id="toggle">
+  <div id="toggle" (click)="handleToggleClick()">
     <div class="span" id=bar1></div>
     <div class="span" id=bar2></div>
     <div class="span" id=bar3></div>
   </div>
+
 </header>
+
+<div class="resizable-menu-container">
+  <ul class="resizable-menu">
+    <li *ngFor = "let item of menu" class="nav-item">
+      <a href="#" class="focus" routerLink="/{{item}}">
+          {{item}}
+      </a></li>
+  </ul>
+</div>
+
+

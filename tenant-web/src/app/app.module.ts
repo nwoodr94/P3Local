@@ -18,6 +18,7 @@ import { TenantWebProfileComponent } from '../../dist/tenant-web-profile';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { RouterModule } from '@angular/router';
+import { ResizeableMenuComponent } from './resizeable-menu/resizeable-menu.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RouterModule } from '@angular/router';
     CardComponent,
     TenantWebSignupComponent,
     TenantWebProfileComponent,
-    AboutComponent
+    AboutComponent,
+    ResizeableMenuComponent
   ],
   imports: [
     RouterModule,
