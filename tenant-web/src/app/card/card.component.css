@@ -9,6 +9,7 @@
 .card  {
   width: 20%;
   height: auto;
+  max-height: 450px;
   margin: 20px auto;
   color: rgba(0, 0, 0, 0.7);
   background-color: rgba(254, 245, 231, 0.4);
