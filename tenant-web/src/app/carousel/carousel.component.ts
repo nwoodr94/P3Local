@@ -57,7 +57,7 @@ export class CarouselComponent implements OnInit {
   }
 
   signUpLink() {
-    this.router.navigate(['/signup'])
+    this.router.navigate(['/SignUp'])
   }
 
 }
