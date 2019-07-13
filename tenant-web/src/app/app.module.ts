@@ -18,7 +18,6 @@ import { TenantWebProfileComponent } from '../../dist/tenant-web-profile';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { RouterModule } from '@angular/router';
-import { ResizeableMenuComponent } from './resizeable-menu/resizeable-menu.component';
 
 
 @NgModule({
@@ -32,7 +31,6 @@ import { ResizeableMenuComponent } from './resizeable-menu/resizeable-menu.compo
     TenantWebSignupComponent,
     TenantWebProfileComponent,
     AboutComponent,
-    ResizeableMenuComponent
   ],
   imports: [
     RouterModule,
