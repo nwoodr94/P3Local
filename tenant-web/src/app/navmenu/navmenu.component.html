@@ -20,10 +20,13 @@
 
 <div class="resizable-menu-container">
   <ul class="resizable-menu">
-    <li *ngFor = "let item of menu" class="nav-item">
+    <li *ngFor = "let item of menu" class="nav-item" (click)="handleToggleClick()">
       <a href="#" class="focus" routerLink="/{{item}}">
           {{item}}
-      </a></li>
+          
+      </a>
+    </li>
+      
   </ul>
 </div>
 

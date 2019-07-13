@@ -1,62 +1,72 @@
-
 .card-container {
   display: flex;
   height: auto;
   width: 100%;
   margin-top: 30px;
-}
-
-.card  {
-  transition: box-shadow .3s;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ 
+ .card  {
   width: 20%;
   height: auto;
-  max-height: 450px;
   margin: 20px auto;
   color: rgba(0, 0, 0, 0.7);
   background-color: rgba(254, 245, 231, 0.4);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
-}
-
-.card-rule {
+  /* background-color: rgb(201, 46, 46); */
+ }
+ 
+ .card-rule {
+ 
   width:70px;
   height:1px;
   margin: 0 auto;
   background-color:#83730B;
-}
-
-.card .image-container {
+ }
+ 
+ .card .image-container {
   width: 100%;
   height: 60%;
   max-width: 100%;
-}
-
-
-.card .image-container img {
+ }
+ 
+ 
+ .card .image-container img {
   width: 100%;
   height: 60%;
   max-width: 100%;
-}
-
-.image-container p:nth-child(2) {
+ }
+ 
+ .image-container p:nth-child(2) {
   text-align: center;
   padding:10px;
   letter-spacing: 5px;
-}
-
-.image-container p:nth-child(4) {
+ }
+ 
+ .image-container p:nth-child(4) {
   text-align: center;
   padding: 0 15px 0 15px;
   font-size: 15px;
-}
-
-
-.image-container p:nth-child(5) {
+ }
+ 
+ 
+ .image-container p:nth-child(5) {
   font-size: 14px;
   text-align: center;
   padding: 10px;
   margin-bottom: 70px;
-}
+ }
+ 
+  @media screen and (max-width: 900px){
+ 
+    .card-container {
+      width: 90%;
+      flex-direction: column;
+      background-color:blue;
+    }
+ 
+    .card {
+      width:100%;
+    }
+  }

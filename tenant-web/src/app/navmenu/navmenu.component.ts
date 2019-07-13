@@ -17,8 +17,10 @@ export class NavmenuComponent implements OnInit {
     console.log("pressed click");
     const navToggle = document.getElementById('toggle');
     let resizable_menu: HTMLElement = document.querySelector('.resizable-menu-container');
-
+    let linelement: HTMLElement = document.querySelector('nav-item');
+    const resizeNav: HTMLElement = document.querySelector('.resizable-menu');
     navToggle.classList.toggle('on');
+    resizeNav.classList.toggle('active');
 
     if(!this.menushown)
     {
