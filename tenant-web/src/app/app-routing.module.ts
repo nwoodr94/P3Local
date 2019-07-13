@@ -7,11 +7,11 @@ import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
 
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'signup', component: TenantWebSignupComponent },
-  { path: 'profile', component: TenantWebProfileComponent }
+  { path: '', redirectTo: '/Home', pathMatch: 'full' },
+  { path: 'Home', component: HomeComponent },
+  { path: 'About', component: AboutComponent },
+  { path: 'SignUp', component: TenantWebSignupComponent },
+  { path: 'Profile', component: TenantWebProfileComponent }
 
 ];
 
